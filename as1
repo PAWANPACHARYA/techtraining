@@ -1,0 +1,15 @@
+ {
+            if (arr[i] == arr[j]) {
+                count++;
+            }
+        }
+        if (count > max_count) {
+            max_count = count;
+            most_frequent_rating = arr[i];
+        }
+    }
+
+    printf("The most frequent rating is: %d with %d occurrences.\n", most_frequent_rating, max_count + 1);
+    
+    return 0;
+}
