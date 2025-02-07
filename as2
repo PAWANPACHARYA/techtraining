@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    
+    printf("Enter the number of days: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    
+    // Input sales data for each day
+    for (int i = 0; i < n; i++) {
+        printf("Enter the sales for day %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+
+    // Find the day with the highest sales
+    int max_sales = arr[0];  // Assume the first day has the highest sales initially
+    int max_day = 0;         // Index of the day with max sales
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max_sales) {
+            max_sales = arr[i];
+            max_day = i;
+        }
+    }
+
+    printf("The day with the highest sales is day %d with sales of %d.\n", max_day + 1, max_sales);
+    
+    return 0;
+}
